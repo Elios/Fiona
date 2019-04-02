@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import TopNav from './navigator/TopNav'
-import LoginNLogon from './modal/LoginNLogon'
-import Bottom from './footer/Bottom'
+import TopNav from '../components/navigator/TopNav'
+import LoginNLogon from '../components/modal/LoginNLogon'
+import Bottom from '../components/footer/Bottom'
 import Body from './body/Body'
 
 export default {

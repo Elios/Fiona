@@ -1,13 +1,13 @@
-let path = require('path')
-let utils = require('./utils')
-let webpack = require('webpack')
-let config = require('../config')
-let merge = require('webpack-merge')
-let baseWebpackConfig = require('./webpack.base.conf')
-let CopyWebpackPlugin = require('copy-webpack-plugin')
-let HtmlWebpackPlugin = require('html-webpack-plugin')
-let ExtractTextPlugin = require('extract-text-webpack-plugin')
-let OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const path = require('path')
+const utils = require('./utils')
+const webpack = require('webpack')
+const config = require('../config')
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 let env = config.build.env
 

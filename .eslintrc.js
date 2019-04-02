@@ -54,7 +54,7 @@ module.exports = {
         'no-redeclare':2,
         'no-self-assign':2,
         'no-delete-var':2,
-        'no-shadow':2,
+        'no-shadow':1,
         'no-undef':2,
         'no-unused-vars':2,
         'no-sync':2,
