@@ -63,11 +63,11 @@ export default {
       let that = this
       this.$axios({
         method: 'post',
-        url: '/logout'
+        url: '/api/logout'
       }).then(function (res) {
         that.isLogin = false
         that.$store.commit('user/SET_UNAME', undefined)
-        sessionStorage.removeItem('state.user')
+        sessionStorage.removeItem('uname')
         that.$Message.info('登出成功')
       }).catch(function (e) {
         that.$Message.error('登出失败，请稍后再试或反馈给我们。')
@@ -83,7 +83,7 @@ export default {
         height: 40px;
         line-height: 40px;
         position: absolute;
-        left: 0px;
+        left: 0;
         width: 100%;
         border: 1px solid #abcdef;
         border-radius: 5px;

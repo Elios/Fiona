@@ -1,20 +1,19 @@
-import anime from '../router/anime'
-import game from '../router/game'
-import film from '../router/film'
-import feedback from '../router/feedback'
-import logon from '../router/logon'
-import login from '../router/login'
-import logout from '../router/logout'
+import anime from './anime'
+import game from './game'
+import film from './film'
+import feedback from './feedback'
+import logon from './logon'
+import login from './login'
+import logout from './logout'
+import home from './home'
 
 export default function (app) {
-  app.get('/', function (req, res) {
-    res.sendFile('./views/index.html')
-  })
-  app.use('/login', login)
-  app.use('/logon', logon)
-  app.use('/logout', logout)
-  app.use('/anime', anime)
-  app.use('/game', game)
-  app.use('/film', film)
-  app.use('/feedback', feedback)
+  app.use('/api/home', home)
+  app.use('/api/login', login)
+  app.use('/api/logon', logon)
+  app.use('/api/logout', logout)
+  app.use('/api/anime', anime)
+  app.use('/api/game', game)
+  app.use('/api/film', film)
+  app.use('/api/feedback', feedback)
 }

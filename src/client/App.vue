@@ -1,19 +1,15 @@
 <template>
     <div id="app">
+      <!--渲染路径匹配到的视图组件，可内嵌自己的<router-view>，根据嵌套路径渲染嵌套组件-->
         <router-view/>
+      <!--<router-link :to="{name:'name'}"> 支持用户在具有路由功能的应用中(点击)导航.默认渲染成带有正确链接的a标签.
+      tag属性可生成其他标签. active-class设置激活状态. exact精确匹配-->
     </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  mounted () {
-    let that = this
-    window.addEventListener('unload', function () {
-      // 添加页面刷新事件监听，防止重新加载页面后登录状态消失
-      sessionStorage.setItem('state.user', JSON.stringify(that.$store.state.user))
-    })
-  }
+  name: 'App'
 }
 </script>
 

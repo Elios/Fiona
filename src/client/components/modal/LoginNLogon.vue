@@ -163,12 +163,11 @@ export default {
           this.modal_loading = true
           this.$axios({
             method: 'post',
-            url: '/login',
+            url: '/api/login',
             data: this.formItems
           }).then(() => {
             that.$Message.info('登录成功')
             that.$store.commit('user/SET_UNAME', that.formItems.uname)
-            // sessionStorage.setItem('uname',that.formItems.uname);
             that.showLogin = false
           }).catch(() => {
             that.$Message.error('登录失败，请确认用户名和密码是否正确或稍后再试。')
@@ -190,13 +189,12 @@ export default {
           this.modal_loading = true
           this.$axios({
             method: 'post',
-            url: '/logon',
+            url: '/api/logon',
             data: this.formItems
           }).then(() => {
             that.$Message.info('注册成功')
             that.$store.commit('user/SET_UNAME', that.formItems.uname)
             that.showLogin = false
-            // sessionStorage.setItem('uname',that.formItems.uname);
           }).catch(() => {
             that.$Message.error('用户名已存在')
           }).finally(() => {
