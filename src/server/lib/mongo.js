@@ -25,9 +25,8 @@ mongolass.plugin('addCreatedAt', {
     return result
   }
 })
-
 // 创建collection  users
-exports.User = mongolass.model('User', {
+let User = mongolass.model('User', {
   uname: { type: 'string', required: true },
   pwd: { type: 'string', required: true },
   gender: { type: 'string', required: true, enum: ['male', 'female', 'unknown'], default: 'unknown' },
@@ -35,4 +34,4 @@ exports.User = mongolass.model('User', {
   phone: { type: 'string', required: true }
 })
 
-exports.User.index({ uname: 1 }, { unique: true }).exec() // uname升序建立唯一索引
+export {User}
