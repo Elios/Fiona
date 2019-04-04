@@ -9,6 +9,9 @@
 
 // 用 xdescribe 取代 describe 将跳过此条，xit 取代 it 同理
 describe('Array', () => {
+  // 重试，重试指定次数直到成功或到达指定次数
+  // this.retries(4)
+
   let arr = []
   // 每个场景测试执行之前执行
   beforeEach(() => {
@@ -31,4 +34,7 @@ describe('Array', () => {
     let arr1 = []
     expect(arr1).to.be.lengthOf(0)
   })
+
+  // 待定测试，不传入第二个参数
+  it('should be something')
 })

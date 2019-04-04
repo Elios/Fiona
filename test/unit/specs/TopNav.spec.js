@@ -1,6 +1,6 @@
-import TopNav from '../../../src/client/components/navigator/TopNav'
+import TopNav from '@/client/components/navigator/TopNav'
 
-xdescribe('topNav', () => {
+describe('topNav', () => {
   let vm
   before(() => {
     vm = new TopNav().$mount()
